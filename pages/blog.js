@@ -3,7 +3,7 @@ import React from 'react'
 function Blog() {
     return (
         <div>
-            Blogging in Hausa
+            No Posts yet
         </div>
     )
 }

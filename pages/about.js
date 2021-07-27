@@ -18,6 +18,10 @@ function about() {
 
         <p>Kasance tare da zamu, Kasance cikin rayuwa mai dadi!</p>
       </div>
+
+      <Hamza>
+        
+      </Hamza>
     </About>
   );
 }
@@ -31,3 +35,7 @@ const About = styled.div`
 const Intro = styled.h4`
     color: #111111 !important;
 `;
+
+const Hamza = styled.div`
+
+`
