@@ -2,15 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import Button from "react-bootstrap/Button";
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
+import { useRouter } from 'next/router'
 
-function Episode() {
+function Episode({data}) {
+    const router = useRouter()
   return (
     <Epi>
-      <Date>16 July 2022</Date>
-      <Title>Episode #20: Ka Farantawa Iyayenka</Title>
-      <Button variant="outline-success" size='lg' className='align-items-center d-flex justify-content-center'>
+      <Date>{data?.date}</Date>
+      <Title>{data?.title}</Title>
+      <Button variant="outline-success" size='lg' className='align-items-center d-flex justify-content-center' onClick={()=> router.push('/blog')}>
           <PlayCircleOutlineIcon fontSize="small" style={{ margin: 0 }} />
-         <p className='' style={{fontSize: "13px", margin:0, marginLeft: '7px'}}> 2 minutes</p></Button>
+         <p className='' style={{fontSize: "13px", margin:0, marginLeft: '7px'}}> {data?.length}</p></Button>
     </Epi>
   );
 }
